@@ -1,0 +1,87 @@
+// Main Scss
+@import "variables";
+
+#blogs {
+	background-color: rgb(29, 28, 28);
+
+	.blog {
+		@media (max-width: 1024px) {
+			flex-direction: column;
+		}
+	}
+
+	.card {
+		flex: calc(33.33% - 30px);
+		padding: 20px;
+		margin-right: 15px;
+
+		.card-title {
+			font-size: 24px;
+			letter-spacing: 2px;
+			line-height: 50px;
+			color: #ffffff;
+			font-family: $font-family2;
+			filter: drop-shadow(0.707px 0.707px 0px rgba(0, 0, 0, 0.75));
+			font-weight: 700;
+		}
+
+		.card-header {
+			font-size: 12px;
+			line-height: 18px;
+			color: #ddd;
+			font-family: $font-family1;
+			padding-bottom: 15px;
+			border-bottom: 1px dashed #666666;
+
+			a {
+				font-size: 12px;
+				line-height: 18px;
+				color: $primary;
+				font-weight: bold;
+				font-family: $font-family1;
+				text-decoration: none;
+			}
+
+			span {
+				padding-bottom: 15px;
+				color: white;
+				font-weight: 500;
+				padding: 0;
+			}
+		}
+
+		.card-body {
+			font-size: 12px;
+			line-height: 18px;
+			color: #ddd;
+			font-family: $font-family1;
+			border-bottom: 1px dashed #666666;
+
+
+			p {
+				margin: 0;
+				padding: 15px 0;
+
+				span {
+					color: white;
+					font-weight: 500;
+					padding: 0;
+				}
+			}
+		}
+
+		.card-footer {
+			text-align: right;
+			padding-top: 10px;
+
+			a {
+				font-size: 12px;
+				line-height: 18px;
+				color: $primary;
+				font-weight: bold;
+				font-family: $font-family1;
+				text-decoration: none;
+			}
+		}
+	}
+}

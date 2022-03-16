@@ -1,0 +1,46 @@
+html {
+	scroll-behavior: smooth;
+	-ms-scroll-behavior: smooth;
+	-webkit-scroll-behavior: smooth;
+}
+
+body {
+	font: {
+		family: "Arial";
+		size: 16px;
+		weight: 400;
+	}
+
+	margin: 0;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin clearfix {
+	&::after {
+		clear: both;
+		display: block;
+		content: "";
+	}
+}
+
+@mixin position {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.container {
+	max-width: 1400px;
+	padding: 0 80px;
+	margin: 0 auto;
+
+	@media (max-width: 768px) {
+		padding: 0 20px;
+	}
+}

@@ -1,0 +1,117 @@
+// Header SCSS
+@import "variables";
+
+#header {
+	background-color: $black;
+	background-image: repeating-linear-gradient(-45deg, #000, #000 5px, #2b2b2b 5px, #2b2b2b 7px);
+
+	.container {
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+		.logo {
+			padding: 15px 0;
+			flex: 0 0 50%;
+
+			@media (max-width: 768px) {
+				text-align: center;
+			}
+		}
+
+		.search-bar {
+			align-items: center;
+			flex: 0 0 50%;
+			text-align: right;
+			position: relative;
+			padding-top: 30px;
+			@media (max-width: 768px) {
+				padding:10px ;
+				align-items: center;
+			}
+
+			input {
+				width: 236px;
+				border-radius: 5px;
+				border: none;
+				height: 28px;
+				@media (max-width: 768px) {
+					width:100%;
+				}
+			}
+
+			button {
+				border-radius: 5px;
+				position: absolute;
+				font-size: 10px;
+				letter-spacing: 0px;
+				line-height: 18px;
+				background-color: $primary;
+				color: white;
+				font-weight: bold;
+				font-family: $font-family1;
+				right: -1px;
+				padding: 0 6px;
+				height: 28px;
+				border-width: 0;
+				font-size: 10px;
+				cursor: pointer;
+
+				i {
+					padding-left: 8px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	.navbar {
+		background-color: $primary;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		.navbar-nav {
+			text-align: center;
+
+			@media (max-width: 1024px) {
+				padding: 0;
+				flex: 0 0 70%;
+			}
+
+			ul {
+				padding: 0;
+				margin: 0;
+
+				li {
+					display: inline;
+					margin: 0 15px;
+					padding: 15px;
+
+					&:hover {
+						 background-color: $black;
+						border-radius: 4px;
+					}
+
+					&:first-child {
+						margin-left: 15px;
+					}
+
+					@media (max-width: 1024px) {
+						margin: 0 6px;
+					}
+
+					a {
+						font-size: 14px;
+						letter-spacing: 0px;
+						line-height: 50px;
+						color: #ffffff;
+						font-weight: bold;
+						font-family: $font-family1;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

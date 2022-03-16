@@ -1,0 +1,122 @@
+// Main SCSS
+@import "variables";
+
+.main {
+	background-color: rgb(231, 231, 231);
+
+	h1 {
+		font-size: 44px;
+		letter-spacing: -1px;
+		line-height: 50px;
+		color: $black;
+		font-family: $font-family2;
+		filter: drop-shadow(0.707px 0.707px 0px rgba(255, 255, 255, 0.75));
+		font-weight: 500;
+		margin: 0;
+		padding: 15px 0;
+
+		@media (max-width: 768px) {
+			text-align: center;
+		}
+	}
+
+	.cards-section {
+		flex-wrap: wrap;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+
+	.card {
+		background-color: white;
+		border-radius: 10px;
+		flex: calc(33.33% - 30px);
+		padding: 20px;
+		text-align: center;
+		border: 1px solid #ddd;
+		height: max-content;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+
+		.card-img {
+			img {
+				border: 1px solid rgba(231, 231, 231);
+				background-image: linear-gradient(0deg, #ebebeb 0%, #ffffff 100%);
+				padding: 5px;
+				width: 100%;
+			}
+		}
+
+		.card-title {
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: bold;
+			font-family: $font-family1;
+			text-align: left;
+			padding: 5px 15px;
+
+			a {
+				color: #1e1e1e;
+				text-decoration: none;
+			}
+		}
+
+		.card-body {
+			padding: 15px;
+			align-items: center;
+
+			p {
+				margin: 0;
+				padding-top: 10px;
+				border-top: 1px dashed rgb(187, 186, 186);
+				font-size: 12px;
+				line-height: 30px;
+				color: #666666;
+				font-family: $font-family1;
+				text-align: left;
+			}
+		}
+	}
+
+	ul {
+		&.pagination {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				padding: 0 5px;
+
+				a {
+					text-decoration: none;
+					color: #666666;
+					font-weight: 500;
+					padding: 15px;
+
+					&.page-link {
+						&:hover {
+							background-color: $black;
+							color: white;
+						}
+					}
+
+					&.btn-primary {
+						width: 300px;
+						background-color: $primary;
+						color: white;
+						font-size: 14px;
+						line-height: 50px;
+					}
+				}
+			}
+		}
+	}
+}
